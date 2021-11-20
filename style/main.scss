@@ -1,0 +1,23 @@
+@import "../scss/abstracts/variables";
+@import "../scss/abstracts/functions";
+@import "../scss/abstracts/extends";
+@import "../scss/abstracts/mixin";
+@import "../scss/base/animations";
+
+// base
+@import "../scss/base/base";
+@import "../scss/base/ultilities";
+@import "../scss/components/buttons";
+@import "../scss/components/cards";
+@import "../scss/components/testimonials";
+@import "../scss/components/form";
+@import "../scss/components/popup";
+@import "../scss/components/nav";
+// layout
+@import "../scss/layout/header";
+@import "../scss/layout/section-about";
+@import "../scss/layout/section-skill";
+@import "../scss/layout/section-courses";
+@import "../scss/layout/section-testimonials";
+@import "../scss/layout/section-erollnow";
+@import "../scss/layout/footer";

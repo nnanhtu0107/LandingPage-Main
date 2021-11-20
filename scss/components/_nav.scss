@@ -1,0 +1,119 @@
+#nav__checkbox {
+   display: none;
+   &:checked ~ .nav__background {
+      transform: scale(60);
+   }
+   &:checked ~ .nav__box {
+      display: block;
+   }
+   &:checked + .nav__btn .nav__btn--icon {
+      background-color: transparent;
+   }
+   &:checked + .nav__btn .nav__btn--icon::before {
+      top: 0;
+      transform: rotate(-135deg);
+   }
+   &:checked + .nav__btn .nav__btn--icon::after {
+      top: 0;
+      transform: rotate(135deg);
+   }
+}
+.nav {
+   &__background {
+      height: 6rem;
+      width: 6rem;
+      border-radius: 50%;
+      position: fixed;
+      top: 5.7rem;
+      right: 7.2rem;
+      background-image: radial-gradient($color-primary, $color-primary-dark);
+      z-index: 1000;
+      transition: transform 0.8s;
+   }
+   &__btn {
+      width: 7rem;
+      height: 7rem;
+      position: fixed;
+      top: 5rem;
+      right: 7rem;
+      z-index: 2000;
+      cursor: pointer;
+      text-align: center;
+      background-color: $color-white;
+      border-radius: 50rem;
+      box-shadow: 0 0.5rem 3rem rgba($color-black, 0.3);
+      &:hover &--icon::before {
+         top: -1rem;
+      }
+      &:hover &--icon::after {
+         top: 1rem;
+      }
+      &--icon {
+         position: relative;
+         margin-top: 3.2rem;
+         &,
+         &::before,
+         &::after {
+            width: 3.5rem;
+            height: 0.3rem;
+            background-color: $color-grey-dark;
+            display: inline-block;
+         }
+         &::before,
+         &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all 0.4s;
+         }
+         &::before {
+            top: -0.8rem;
+         }
+
+         &::after {
+            top: 0.8rem;
+         }
+      }
+   }
+   &__box {
+      display: none;
+      position: fixed;
+      top: 50%;
+      right: 34%;
+      z-index: 1500;
+      transform: translate(-50%, -50%);
+      transition: all 0.8s 0.2s;
+      &--list {
+         text-align: center;
+         > li {
+            margin-bottom: 2rem;
+            list-style: none;
+            > a {
+               display: inline-block;
+               padding: 1rem 2rem;
+               border-radius: 2rem;
+               font-size: 3rem;
+               line-height: 3rem;
+               font-weight: 300;
+               text-decoration: none;
+               color: $color-white;
+               text-transform: uppercase;
+               animation: FadeInRight linear 0.5s;
+               background-image: radial-gradient(
+                  150% 200% ellipse at 115%,
+                  $color-white 0%,
+                  $color-white 50%,
+                  transparent 50%
+               );
+               background-size: 252%;
+               transition: all 0.5s;
+               &:hover {
+                  background-position: 100%;
+                  color: $color-primary;
+                  transform: translateX(1rem);
+               }
+            }
+         }
+      }
+   }
+}

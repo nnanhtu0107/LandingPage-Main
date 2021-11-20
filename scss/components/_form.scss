@@ -1,0 +1,73 @@
+.form {
+   &__input {
+      display: block;
+      font-size: 1.4rem;
+      width: 35%;
+      height: 4.5rem;
+      padding-left: 1.5rem;
+      border-radius: 0.5rem;
+      border: none;
+      outline-style: none;
+      background-color: rgba($color-white, 0.6);
+      transition: all 0.3s;
+      &:focus {
+         border-bottom: 3px solid $color-orange;
+         box-shadow: 0 0.5rem 2rem rgba($color-black, 0.3);
+         &:invalid {
+            border-bottom: 3px solid $color-primary;
+         }
+      }
+      &:placeholder-shown + &--label {
+         opacity: 0;
+         transform: translateY(-4rem);
+      }
+      &--label {
+         font-size: 1.2rem;
+         font-weight: 700;
+         padding: 1rem 1rem 0;
+      }
+   }
+   & ul {
+      list-style: none;
+   }
+   & ul li:not(:last-child) {
+      margin-bottom: 2rem;
+   }
+   &__radio {
+      display: none;
+      &:checked + &--btn::before {
+         display: inline-block;
+      }
+      &--btn {
+         height: 3rem;
+         width: 3rem;
+         border: 0.5rem solid $color-primary;
+         border-radius: 10rem;
+         margin-left: 3.5rem;
+         display: inline-block;
+         transform: translate(-3.4rem, 0.8rem);
+         position: relative;
+         cursor: pointer;
+         &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: $color-primary;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 10rem;
+            display: none;
+         }
+      }
+      &--label {
+         margin-right: 6rem;
+      }
+   }
+   &__btn {
+      margin-top: 2rem;
+      border: none;
+      padding: 1.8rem 4rem;
+   }
+}

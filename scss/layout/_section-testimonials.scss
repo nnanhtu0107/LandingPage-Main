@@ -1,0 +1,26 @@
+.section-testimonials {
+   position: relative;
+   &__bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      opacity: 0.2;
+      overflow: hidden;
+   }
+   &__title {
+      padding-top: 6rem;
+   }
+   &__comment {
+      margin-bottom: 10rem;
+      &--title {
+         @extend %h3-text;
+         font-size: 1.6rem;
+      }
+   }
+   &__btn {
+      margin-bottom: 13rem;
+   }
+}

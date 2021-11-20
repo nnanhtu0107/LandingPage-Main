@@ -1,0 +1,44 @@
+@mixin gradient-course-1 {
+   background-image: linear-gradient(
+      to right,
+      rgba($color-course-1-l, 0.85),
+      rgba($color-course-1-d, 0.85)
+   );
+}
+@mixin gradient-course-2 {
+   background-image: linear-gradient(
+      to right,
+      rgba($color-course-2-l, 0.9),
+      rgba($color-course-2-d, 0.9)
+   );
+}
+@mixin gradient-course-3 {
+   background-image: linear-gradient(
+      to right,
+      rgba($color-course-3-l, 0.85),
+      rgba($color-course-3-d, 0.85)
+   );
+}
+
+@mixin respond($breakpoint) {
+   @if $breakpoint == "mobile" {
+      @media (max-width: 739px) {
+         @content;
+      }
+   }
+   @if $breakpoint == "tablet" {
+      @media (max-width: 1023px) {
+         @content;
+      }
+   }
+   @if $breakpoint == "tablet-land" {
+      @media (max-width: 1200px) {
+         @content;
+      }
+   }
+   @if $breakpoint == "wide-desktop" {
+      @media (min-width: 1800px) {
+         @content;
+      }
+   }
+}

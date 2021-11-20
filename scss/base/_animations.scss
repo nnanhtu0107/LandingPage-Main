@@ -1,0 +1,54 @@
+@keyframes FadeInLeft {
+   0% {
+      opacity: 0;
+      transform: translateX(-100px);
+   }
+   80% {
+      transform: TranslateX(-20px);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+@keyframes FadeInRight {
+   0% {
+      display: block;
+      opacity: 0;
+      transform: translateX(100px);
+   }
+
+   80% {
+      transform: translateX(20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+
+@keyframes FadeInBottom {
+   0% {
+      opacity: 0;
+      transform: translateY(20px);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+@keyframes GrowUp {
+   0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.2);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+   }
+}

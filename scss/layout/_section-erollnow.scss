@@ -1,0 +1,17 @@
+.section-erollnow {
+   @include gradient-course-2;
+   padding: 10rem 16rem;
+   &__box {
+      background-image: radial-gradient(
+            150% 200% ellipse at -15%,
+            rgba($color-white, 0.8) 50%,
+            transparent 50%
+         ),
+         url("../img/background3.jpg");
+      background-size: cover;
+      border-radius: 5rem;
+      box-shadow: 0 0.5rem rgba($color-black, 0.2);
+      height: 50rem;
+      padding: 6rem 5rem;
+   }
+}

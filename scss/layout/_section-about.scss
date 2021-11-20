@@ -1,0 +1,51 @@
+.section-about {
+   &__title {
+      display: inline-block;
+   }
+   &__des {
+      color: $color-grey;
+      &--title {
+         margin-bottom: 20px;
+         font-size: 1.6rem;
+         text-transform: uppercase;
+      }
+      &--content {
+         margin-bottom: 30px;
+      }
+      &--btn {
+      }
+   }
+   &__photo {
+      position: relative;
+      &--img {
+         width: 50%;
+         box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
+         border-radius: 0.2rem;
+         z-index: 10;
+         position: absolute;
+         transition: all 0.2s;
+         outline-offset: 1rem;
+         &-1 {
+            &:hover {
+               @extend %border-img;
+            }
+         }
+         &-2 {
+            top: 4rem;
+            left: 22rem;
+            z-index: 11;
+            &:hover {
+               @extend %border-img;
+            }
+         }
+         &-3 {
+            top: 12rem;
+            left: 7rem;
+            z-index: 12;
+            &:hover {
+               @extend %border-img;
+            }
+         }
+      }
+   }
+}

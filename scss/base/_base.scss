@@ -1,0 +1,43 @@
+html {
+   font-size: 62.5%;
+   @include respond(tablet-land) {
+      font-size: 56.25%;
+   }
+   @include respond(tablet) {
+      font-size: 50%;
+   }
+   @include respond(wide-desktop) {
+      font-size: 75%;
+   }
+}
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: inherit;
+}
+body {
+   font-family: "Lato", sans-serif;
+   font-weight: 400;
+   font-size: 1.6rem;
+   line-height: 1.7;
+   color: $color-grey;
+   padding: 30px;
+   box-sizing: border-box;
+   @include respond(tablet-land) {
+      padding: 0;
+   }
+}
+.l-o-1 {
+   margin-left: 4.66667%;
+}
+.l-o-2 {
+   margin-left: 11.66667%;
+}
+.l-2 {
+   flex: 0 0 15.66667%;
+   max-width: 15.66667%;
+}
+.l-2-4 {
+   flex: 0 0 22.44445%;
+   max-width: 22.44445%;
+}

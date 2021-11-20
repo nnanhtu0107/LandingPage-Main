@@ -1,0 +1,35 @@
+.section-skill {
+   margin-top: 7rem;
+   padding: 20rem 0;
+   background-image: linear-gradient(
+         to right bottom,
+         rgba($color-primary-light, 0.8),
+         rgba($color-primary-dark, 0.8)
+      ),
+      url("../img/background2.jpg");
+   background-size: cover;
+   position: relative;
+   clip-path: ellipse(70% 50% at 50% 50%);
+   &__box {
+      background-color: rgba($color-white, 0.8);
+      box-shadow: 0 1rem 4rem rgba($color-black, 0.2);
+      border-radius: 6rem;
+      padding: 0.5rem 2rem 3rem;
+      font-size: 1.5rem;
+      text-align: center;
+      transition: all 0.2s;
+      cursor: pointer;
+      &:hover {
+         transform: translateY(-1rem) scale(1.1);
+      }
+      &--icon {
+         font-size: 6rem;
+         @extend %text-gradient;
+      }
+      &--title {
+         font-size: 1.5rem;
+         text-transform: uppercase;
+         margin-bottom: 1rem;
+      }
+   }
+}
